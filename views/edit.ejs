@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/forms.css" type="text/css">
+
+<body>
+    <h2>Edytuj Studenta</h2>
+    <form action="/students/<%= student.index %>" method="POST">
+        <div>
+            <label>Index</label>
+            <input type="text" name="index" value="<%= student.index %>">
+            <label>Aktywny</label>
+            <input type="text" name="isActive" value="<%= student.isActive %>">
+            <label>Wiek</label>
+            <input type="number" name="age" value="<%= student.age %>">
+            <label>Kolor oczu</label>
+            <input type="text" name="eyeColor" value="<%= student.eyeColor %>">
+            <label>Imie i nazwisko</label>
+            <input type="text" name="name" value="<%= student.name %>">
+            <label>Numer indeksu</label>
+            <input type="number" name="indexNumber" value="<%= student.indexNumber %>">
+            <label>Płeć</label>
+            <input type="text" name="gender" value="<%= student.gender %>">
+            <label>Email</label>
+            <input type="email" name="email" value="<%= student.email %>">
+            <label>Numer telefonu</label>
+            <input type="text" name="phone" value="<%= student.phone %>">
+            <label>Adres</label>
+            <input type="text" name="address" value="<%= student.address %>">
+            <label>Oceny</label>
+            <input type="text" name="schoolGrade" value="<%= student.schoolGrade %>">
+            <button type="submit">Zaktualizuj</button>
+            <a href="/">Anuluj</a>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/forms.css" type="text/css">
+
+<body>
+    <h2>Dodaj Studenta</h2>
+    <form action="/students/new" method="POST">
+        <div>
+            <label>Index</label>
+            <input type="text" name="index" required>
+            <label>Aktywny</label>
+            <input type="text" name="isActive" required>
+            <label>Wiek</label>
+            <input type="number" name="age" required>
+            <label>Kolor oczu</label>
+            <input type="text" name="eyeColor" required>
+            <label>Imie i nazwisko</label>
+            <input type="text" name="name" required>
+            <label>Numer indeksu</label>
+            <input type="number" name="indexNumber" required>
+            <label>Płeć</label>
+            <input type="text" name="gender" required>
+            <label>Email</label>
+            <input type="email" name="email" required>
+            <label>Numer telefonu</label>
+            <input type="text" name="phone" required>
+            <label>Adres</label>
+            <input type="text" name="address" required>
+            <label>Oceny</label>
+            <input type="text" name="schoolGrade" required>
+            <button type="submit">Stwórz</button>
+            <a href="/">Anuluj</a>
+        </div>
+    </form>
+</body>

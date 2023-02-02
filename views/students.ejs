@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="/css/students.css" type="text/css">
+
+<body>
+    <header>
+        <a href="./students/new">Dodaj Studenta</a>
+    </header>
+
+    <main>
+        <h2>Wyszukaj</h2>
+        <form action="/students" method="GET">
+            <input type="text" name="name" value="<% searchOptions.name%>">
+            <button type="submit">Szukaj</button>
+            <p>*Wyszukiwarka znajduje studenta po imieniu, nazwisku czy literze</p>
+            <p>Pusty imput zwraca wszystkich studentów</p>
+        </form>
+
+        <table>
+            <tr>
+                <th>Index</th>
+                <th>Aktywny</th>
+                <th>Wiek</th>
+                <th>Kolor oczu</th>
+                <th>Imie i nazwisko</th>
+                <th>Numer indeksu</th>
+                <th>Płeć</th>
+                <th>Email</th>
+                <th>Numer telefonu</th>
+                <th>Adres</th>
+                <th>Oceny</th>
+            </tr>
+            <% students.forEach(student => { %>
+            <tr>
+                <td>
+                    <%=student.index %>
+                </td>
+                <td>
+                    <%=student.isActive %>
+                </td>
+                <td>
+                    <%=student.age %>
+                </td>
+                <td>
+                    <%=student.eyeColor %>
+                </td>
+                <td>
+                    <%=student.name %>
+                </td>
+                <td>
+                    <%=student.indexNumber %>
+                </td>
+                <td>
+                    <%=student.gender %>
+                </td>
+                <td>
+                    <%=student.email %>
+                </td>
+                <td>
+                    <%=student.phone %>
+                </td>
+                <td>
+                    <%=student.address %>
+                </td>
+                <td>
+                    <%=student.schoolGrade %>
+                </td>
+                <td>
+                    <div class="btn">
+                        <a href="/students/<%= student.index%>/edit">Edytuj</a>
+                    </div>
+                </td>
+                <td>
+                    <form method="GET" action="/students/<%= student.index%>/delete">
+                        <button type="submit">Usuń</button></form>
+                </td>
+            </tr>
+            <% }); %>
+        </table>
+    </main>
+</body>

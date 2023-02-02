@@ -1,0 +1,28 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #292929;
+    font-family: 'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        sans-serif;
+}
+
+li {
+    list-style-type: none;
+    margin: 20px;
+    padding: 10px 20px;
+    box-shadow: #ffc815 0px 5px 15px;
+    background-color: #272626;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffc815;
+    font-size: 32px;
+}
